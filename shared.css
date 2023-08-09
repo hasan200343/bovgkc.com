@@ -1,0 +1,141 @@
+/*common styling for each page*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Share Tech", sans-serif;
+}
+
+body {
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  box-shadow: 0 1px 10px rgba(1, 1, 1, 0.2);
+  box-sizing: content-box;
+  position: fixed;
+  list-style: none;
+}
+
+.nav-links {
+  color: black;
+  margin: 0 3vw 0 0;
+}
+
+.logo {
+  font-size: 30px;
+}
+
+#logo {
+  width: 25%;
+  padding: 0 0 0 1.5%;
+}
+
+.menu {
+  display: flex;
+  gap: 3em;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu li {
+  padding: 10px 5px;
+}
+
+.menu li:hover {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+#paralist {
+  display: flex;
+}
+
+#head {
+  font-family: "Baskervville", serif;
+  font-size: 2vw;
+  margin: 0 2vw 0 0;
+}
+
+#pic {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    transition: 0.5s;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.7s;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+    transition: 0.7s;
+  }
+
+  .hamburger {
+    display: block;
+    transition: 0.5s;
+  }
+}
